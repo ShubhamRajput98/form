@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            min-height: 100vh;
+            background: rgb(26, 24, 24);
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            height: 400px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        form h2{
+            margin: 10px;
+            color: aqua;
+            font-weight: 500;
+        }
+        .form{
+            margin: 10px;
+            position: relative;
+        }
+        .form-input{
+            height: 30px;
+            width: 100%;
+            color: white;
+            font-family:sans-serif;
+            font-weight: bold;
+            font-size: large;
+            border: 1px solid grey;
+            outline: none;
+            border-radius: 6px;
+            padding: 16px;
+            background: none;
+        }
+        .form-input:hover{
+            border: 1px solid rgba(255, 0, 212, 0.514);
+        }
+        .form-input:focus{
+            border: 1px solid rgb(16, 247, 197);
+        }
+        .form-input:focus ~ .form-lable,
+        .form-input:not(:placeholder-shown).form-input:not(:focus)~.form-lable{
+            top:-0.5rem;
+            background: rgb(26, 24, 24);
+            font-size: 0.9rem;
+            color:rgb(16, 247, 197);
+        }
+        .form-lable{
+            position: absolute;
+            left: 15px;
+            top: 8px;
+            color:grey;
+            cursor: text;
+            transition: all 200ms ease-in-out;
+        }
+       
+    </style>
+</head>
+<body>
+    <form action="">
+        <h2>Creat your account</h2>
+         <div class="form">
+             <input type="text" class="form-input" placeholder=" ">
+             <label class="form-lable">Name</label>
+         </div>
+         <div class="form">
+             <input type="email" class="form-input" placeholder=" ">
+             <label class="form-lable">Email</label>
+         </div>
+         <div class="form">
+             <input type="password" class="form-input" placeholder=" ">
+             <label class="form-lable">password</label>
+         </div>
+         <div class="form">
+             <input type="text" class="form-input" placeholder=" ">
+             <label class="form-lable">Conform password</label>
+         </div>
+    </form>
+</body>
+</html>
